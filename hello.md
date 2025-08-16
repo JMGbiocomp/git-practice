@@ -23,6 +23,7 @@ git add .
 -commits all the files on the staging area
 - the arguemtn "-m" followed by "some commit message here" adds a message to display to the commit history of this commit
 -placing a specific file name after commit or at the end of the command will only commit that file and leave everything else staged
+*not including a massage will send you to the vim text editor to inlcude a message so alweays just include thje -m "message" in the command
 Ex:
 git commit
 git commit -m "feature add: login credentials"
@@ -45,7 +46,7 @@ git log --author="author name"
 
 6.  git remote
 
-7.  got push
+7.  git push
 
 8.  git pull
 
