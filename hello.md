@@ -26,13 +26,29 @@ git add .
 Ex:
 git commit
 git commit -m "feature add: login credentials"
-git commit
+git commit -m "featue add" <filename>
 
-5. git log
+5.  git log
 -view the commit history of the current branch
 -contains a unique commit hash, branch information, author, date, commit message if available, and continues in reverse order chronologically
- -add the branch_name after "log" to get the commit history of a specific branch
- -add file path after "log" to get the commit history of a specific file
+-add the branch_name after "log" to get the commit history of a specific branch
+-add file path after "log" to get the commit history of a specific file
+-use --after="year-month-day" to view commits on specific date
+-use --oneline to see commit hisotry summaries on one line
+Ex:
+git log
+git log branch_name
+git log path/to/file
+git log --after="2021-09-01"
+git log --oneline
+git log --author="author name"
+
+6.  git remote
+
+7.  got push
+
+8.  git pull
+
 
 
 
