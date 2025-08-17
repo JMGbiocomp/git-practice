@@ -74,7 +74,7 @@ git remote set-url origin https://github.com/JMGbiocomp/git-practice.git
 -add local changes to the remote repository
 -can require admin to review pushes before accepting them into the remote
 Ex:
-git push -u origin main #or 'master' depending on the central branches name
+git push -u origin main #or 'master' depending on the central branches name; username=github username and password=token (not github password); essentiall it is... git push -u <repository> <branch> 
 git push --all origin #all branches
 git push --tags origin #all tags
 
@@ -83,7 +83,7 @@ git push --tags origin #all tags
 -allows you to work locally from the changes on the remote or add your local changes to the combined hisotry on the remote
 Ex:
 git pull #pull changes from default remote (usually origin); check with git remote -v
-git pull <remote> <branch>  #example: git pull origin main
+git pull <remote> <branch>  #example: git pull origin main from set repository as origin and the branch
 
 9.  git mv
 -move or rename files, directories or symlink
@@ -98,7 +98,7 @@ git mv source/file/path destination/file/path
 Ex:
 git branch --list #list branches
 git branch -d -r origin/b1 origin/b2 origin/b3 #deletes (-d) remote (-r) brachs b1, b2, and b3
-
+git branch -M <newbranchname> #rename the current branch
 
 
 2. git checkout
