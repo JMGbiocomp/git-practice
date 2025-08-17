@@ -45,10 +45,26 @@ git log --oneline
 git log --author="author name"
 
 6.  git remote
+-set up, change and view remote repository
+Ex:
+git remove -v #view remote connections withj local repository
+git remove add https://github.com/JMGbiocomp/git-practice.git
+git remote set-url origin https://github.com/JMGbiocomp/git-practice.git
 
 7.  git push
+-add local changes to the remote repository
+-can require admin to review pushes before accepting them into the remote
+Ex:
+git push -u origin main #or 'master' depending on the central branches name
+git push --all origin #all branches
+git push --tags origin #all tags
 
 8.  git pull
+-git pull is a combination of both 'git fetch' and 'git merge' in which fetch retrieves the changes and merge to combine your local changes with the history of the remote changes to create a linear history
+-allows you to work locally from the changes on the remote or add your local changes to the combined hisotry on the remote
+Ex:
+git pull #pull changes from default remote (usually origin); check with git remote -v
+git pull <remote> <branch>  #example: git pull origin main
 
 
 
