@@ -1,6 +1,25 @@
 # I am learning to use Git!
 
-## Git Command Usage
+## admin commands
+
+a.  git help
+-display help information about git commands
+Ex:
+git help -a #all commands
+git help -c #allo available configuration variables
+git help -g #print a list of git concept guides
+
+b.  git config
+-can query/set/replace/unset options aka configure
+-commands within config:
+    -list: list all variables eet in config file and values
+    -get: retrieves a value specified
+    -set: sets vale for one or more config
+    -unset: unset value for one or more config
+    -edi: opens an editor to modify the specified config either --system, --global, --local(default), --worktree, or --file <config file>
+*see documentation for options and arguements; view config file to evalaute issues and debugt problems
+
+## basic commands
 
 1.  git status
 -returns the repositopry status on your current directory
@@ -66,6 +85,31 @@ Ex:
 git pull #pull changes from default remote (usually origin); check with git remote -v
 git pull <remote> <branch>  #example: git pull origin main
 
+## Branch management
+
+1. git branch
+-list, create or delete branches
+Ex:
+git branch --list #list branches
+git branch -d -r origin/b1 origin/b2 origin/b3 #deletes (-d) remote (-r) brachs b1, b2, and b3
+
+
+
+2. git checkout
+-switch branches or restore working tree files
+-commonly used to create branches as well
+Ex:
+git checkout <branch>
+git checkout -b <branch> #new branch
+git checkout -m <branch> #merges current branch, working branch and new branchy together
+
+3. git switch
+
+
+4. git merge
+
+
+5.  git tag
 
 
 
