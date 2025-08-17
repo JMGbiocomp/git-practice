@@ -85,6 +85,12 @@ Ex:
 git pull #pull changes from default remote (usually origin); check with git remote -v
 git pull <remote> <branch>  #example: git pull origin main
 
+9.  git mv
+-move or rename files, directories or symlink
+Ex:
+git mv <oldfilename> <newfilename>
+git mv source/file/path destination/file/path
+
 ## Branch management
 
 1. git branch
