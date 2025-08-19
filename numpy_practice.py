@@ -1,3 +1,7 @@
+"""
+Purpose: NumPy learning for handling and working with data structures in a python environment, a lead up to Pandas.
+Author: Joshua Glowalla
+"""
 # === Imports ===
 import pandas as pd
 import numpy as np
@@ -86,7 +90,25 @@ def array_syntax_tester(structure_1 = 0, structure_2 = 0, structure_3 = 0, high_
         print("datatype:")
         print(a.dtype)
 
-    
-array_syntax_tester(a, a)
-array_syntax_tester(a, a, a)
-array_syntax_tester(a, a, high_dim = True)
+# --- testing proper syntax for increasing dimensionality of arrays ---    
+#array_syntax_tester(a, a)
+#array_syntax_tester(a, a, a)
+#array_syntax_tester(a, a, high_dim = True)
+
+# --- building arrays from exisitng arrays ---
+array_2D = np.array([a, a, a, a, a, a, a, a, a, a]) #list 'a' with 10 elements used to build a 10 x 10 array
+#print(array_2D) #view 10 x 10 array
+#print(array_2D.shape) #confirm array structure
+#print(array_2D[0,:]) #single row slice
+#print(array_2D[:,0]) #single column slice
+
+#stacking arrays to add rows or columns; *require homogeneity in length for corresponding dimension
+#vstack and hstack
+add_array = np.zeros(100) #build a 100 element array with zeroes
+add_array = add_array.reshape(10,10) #reshape the zero array to a 10x10 array
+array_2D_plusC = np.hstack((array_2D, add_array)) #combine arrays by columns
+#print(array_2D_plusC)
+array_2D_plusR = np.vstack((array_2D, add_array)) #combine arrays by rows
+#print(array_2D_plusR)
+
+#
