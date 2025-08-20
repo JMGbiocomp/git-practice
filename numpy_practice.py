@@ -111,4 +111,37 @@ array_2D_plusC = np.hstack((array_2D, add_array)) #combine arrays by columns
 array_2D_plusR = np.vstack((array_2D, add_array)) #combine arrays by rows
 #print(array_2D_plusR)
 
-#
+#increasing the number of axes of arrays
+array_1D = np.array([0, 1, 2, 3])
+
+def add_axes_dim(input_array, input_print = False, output_print = False, add_axis = "none", dim_add = False, dim_num = 0):
+    if input_print == True:
+        print(input_array)
+        print(input_array.shape)
+    else:
+        pass
+    if add_axis == "r":
+        new_array = input_array[np.newaxis, :] #add new axis to dimension 1
+    elif add_axis == "c":
+        new_array = input_array[:, np.newaxis] #add new axis to dimension 2
+    else:
+        new_array = input_array
+    if dim_add == True:
+        if len(new_array.shape) != (dim_num):
+            raise ValueError("The dimension you wish to add is not the next diomensional level of the array.  Please review input array shape or ndim attributes for details.")
+        else:
+            new_array = np.expand_dims(new_array, axis = dim_num)
+    else:
+        pass
+    if output_print == True:
+        print("final array shape: %d" % (new_array.shape))
+        print("final array dimensions %d" % (new_array.ndim))
+        print(new_array)
+    else:
+        pass
+    return(new_array)
+
+#array_3D = add_axes_dim(array_1D, add_axis = "c", dim_add = True, dim_num = 5) #correctly raises an error message
+array_3D = add_axes_dim(array_1D, add_axis = "r", dim_add = True, dim_num = 2)
+array_4D = add_axes_dim(array_2D, add_axis = "r", dim_add = True, dim_num = 3)
+#print(array_4D.shape)
